@@ -1,0 +1,41 @@
+constante N: inteiro = 3
+
+var nota1: real
+var nota2: real
+var mediaponderada: real
+var soma: real
+var supermedia: real
+
+soma = 0
+
+para (var i = 1; i < N; i = i + 1) {
+    escreva('entrada ${i}');
+    nota1 = real(leia('digite a nota 1'))
+    nota2 = real(leia('digite a nota 2'))
+    mediaponderada = (nota1*4 + nota2*7)/(4+7)
+    escreva ('media ponderada = ${mediaponderada}')
+    soma = soma+mediaponderada
+}
+
+supermedia = (mediaponderada+soma/soma)
+
+escreva ('nota 1 = ${nota1}')
+escreva ('nota 2 = ${nota2}')
+
+escreva ('media ponderada = ${mediaponderada}')
+escreva ('soma = ${soma}')
+escreva ('${supermedia}')
+
+var chute: real
+
+  fazer
+  { 
+    chute = real(leia('digite a super media'))
+    se (chute < supermedia) {
+        escreva('valor muito baixo');
+    } senao se (chute > supermedia) {
+        escreva('valor muito alto');
+    } senao {
+        escreva('parabens você acertou');
+    }
+ } enquanto(chute !=supermedia)
